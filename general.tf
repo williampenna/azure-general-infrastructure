@@ -30,3 +30,12 @@ resource "azurerm_storage_container" "sc" {
 
   depends_on = [azurerm_resource_group.rg]
 }
+
+module "event_hub" {
+  source          = "./modules/event_hub"
+  
+  RESOURCE_GROUP  = azurerm_resource_group.rg.name
+  LOCATION        = azurerm_resource_group.rg.location
+
+  depends_on      = [azurerm_resource_group.rg]
+}

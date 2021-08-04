@@ -6,7 +6,7 @@ variable "AZURE_DEVOPS_ORG_SERVICE_URL" {}
 
 # GLOBAL VARIABLES
 variable "RESOURCE_GROUP" {
-  default = "will-tests"
+  default = "test-event-hub"
 }
 variable "LOCATION" {
   default = "eastus2"
